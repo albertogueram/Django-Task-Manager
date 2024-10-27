@@ -13,6 +13,12 @@
 
 <h1>Pending List</h1>
 <a href="{% url 'create-task' %}">Create new task</a>
+
+<form method="GET">
+    <input type="text" name="search-area" value="{{search_value}}">
+    <input type="submit" value="search">
+</form>
+
 <table>
     <tr>
         <th>Elements</th>
