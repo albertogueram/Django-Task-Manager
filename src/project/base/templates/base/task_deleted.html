@@ -1,6 +1,15 @@
-<h1>Are you sure that you want to delete '{{task}}' task?</h1>
-<form method="POST">
-    {% csrf_token %}
-    <button type="submit">Delete</button>
-    <a href="{% url 'pending' %}">Cancel</a>
-</form>
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="top-bar">
+    <h1>Are you sure that you want to delete '{{task}}' task?</h1>
+</div>
+
+<div class="body-card">
+    <form method="POST">
+        {% csrf_token %}
+        <button class='button' type="submit">Delete</button>
+        <a href="{% url 'pending' %}">Cancel</a>
+    </form>
+</div>
+{% endblock content %}

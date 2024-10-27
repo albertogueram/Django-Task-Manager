@@ -1,8 +1,16 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="top-bar">
 <h1>Task Form</h1>
 <a href="{% url 'pending' %}">Task List</a>
+</div>
 
-<form method="POST" action="">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Send">
-</form>
+<div class="body-card">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class='button' type="submit" value="Send">
+    </form>
+</div>
+{% endblock content %}
